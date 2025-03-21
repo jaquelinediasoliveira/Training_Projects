@@ -1,0 +1,33 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#headerContainer{
+  width: 100%;
+  min-height: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.headerAlign{
+  width: 32%;
+  display: flex;
+  align-items: center;
+}
+
+#pageTitle{
+  font-weight: 700;
+  font-size: 3em;
+}
+
+#artIcon{
+  width: 50px;
+  height: fit-content;
+}
