@@ -14,7 +14,6 @@ export default function SearchBar({setTextInputValue}) {
   
     const handleKeyDown = (e) => {
       if (e.key === "Enter" && inputValue.trim() !== "") {
-        // alert(`Resposta enviada: ${inputValue}`);
         setTextInputValue(inputValue);
         setInputValue(""); 
       } else if (e.key === "Enter" && inputValue.trim() === "") {
@@ -25,7 +24,6 @@ export default function SearchBar({setTextInputValue}) {
     const handleSubmit = () => {
       if (inputValue.trim() !== "") {
         setTextInputValue(inputValue);
-        // alert(`Resposta enviada: ${inputValue}`);
         setInputValue("");
       } else {
         alert("Please, type something before searching");

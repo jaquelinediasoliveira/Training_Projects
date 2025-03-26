@@ -20,3 +20,9 @@
   #btnSearch:hover{
     cursor: pointer;
   }
+
+  @media (max-width: 1200px) {
+    #inputAlign{
+      width: 100%;
+    }
+  }
