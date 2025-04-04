@@ -1,12 +1,15 @@
 import './App.css'
+import './assets/styles/styles.css'
 
-import welcome from './assets/welcome.png'
+import welcome from './assets/images/welcome.png'
 
 import IconButton from '@mui/material/IconButton';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import Grid from '@mui/material/Grid';
 import { useState } from 'react';
-import LoginForm from './components/forms/Login/LoginForm';
+
+import RegisterForm from './components/Register/RegisterForm';
+import LoginForm from './components/Login/LoginForm';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -31,7 +34,8 @@ function App() {
             <Grid size={{ xs: 2, sm: 3, md: 5 }} />
           </Grid>
           :
-          <LoginForm/>
+          // <LoginForm/>
+          <RegisterForm/>
       }
     </>
   )
