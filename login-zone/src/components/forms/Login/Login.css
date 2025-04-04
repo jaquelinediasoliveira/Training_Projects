@@ -1,0 +1,81 @@
+#formPageContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#formContainer {
+    height: 70%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.002);
+    backdrop-filter: blur(2.5px);
+    border-radius: 10px;
+}
+
+.input {
+    width: 60%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #EDEDED;
+}
+
+#alignPasswordInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+#passwordInput {
+    width: 95%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    background-color: #EDEDED;
+}
+
+.input:focus,
+#passwordInput:focus {
+    outline: none;
+}
+
+#formSubmit {
+    width: 25%;
+    height: 50px;
+    background: linear-gradient(96.3deg, #948EDF 37.76%, #B1A3D9 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#alignFormType {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    justify-self: center;
+}
+
+#alignFormType .pageFormName {
+    color: #3B4C61;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: none;
+}
+
+#alignFormType .pageFormName:hover, #alignFormType .pageFormName:focus{
+    outline: none;
+    border-radius: 0;
+    border-bottom: 2px solid #3B4C61;
+}

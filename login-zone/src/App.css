@@ -1,0 +1,33 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url(./assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg) center/cover no-repeat;
+}
+
+#exitIconGrid{
+   display: flex;
+   justify-content: flex-end;
+  align-items: flex-start;
+}
+
+#exitIcon{
+  margin: 10% 10% 0 0;
+}
+
+#exitIcon:focus{
+  outline: none;
+}
+
+#welcomeImgGrid{
+  display: flex;
+  justify-content: center;
+}
+
+#welcomeImg{
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+}
