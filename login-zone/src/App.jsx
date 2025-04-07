@@ -13,6 +13,25 @@ import LoginForm from './components/Login/LoginForm';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [formPage, setFormPage] = useState('login');
+
+  const [usersList, setUsersList] = useState([]);
+
+const addUserToList = (newUser) => {
+  setUsersList((prevUsers) => [...prevUsers, newUser]);
+}
+
+  const handleLogged = (e) => {
+    setLoggedIn(e)
+  }
+
+  const exitPage = () => {
+    setLoggedIn(false)
+  }
+
+  const handlePage = (e) => {
+    setFormPage(e)
+  }
 
   return (
     <>
@@ -23,7 +42,7 @@ function App() {
             <Grid size={{ xs: 1, sm: 2, md: 4 }} />
             <Grid size={{ xs: 1, sm: 1, md: 1 }} id='exitIconGrid'>
               <IconButton aria-label="exit" id='exitIcon' disableRipple >
-                <ExitToAppIcon sx={{ color: '#fff', fontSize: '40px' }} />
+                <ExitToAppIcon sx={{ color: '#fff', fontSize: '40px' }} onClick={exitPage} />
               </IconButton>
             </Grid>
             <Grid size={{ xs: 0.25, sm: 0.5, md: 1 }} />
@@ -34,8 +53,10 @@ function App() {
             <Grid size={{ xs: 2, sm: 3, md: 5 }} />
           </Grid>
           :
-          // <LoginForm/>
-          <RegisterForm/>
+          (formPage === 'login') ?
+            <LoginForm setConfirmed={handleLogged} selectedPage={handlePage} usersList={usersList}/>
+            :
+            <RegisterForm selectedPage={handlePage} onAddUser={addUserToList}/>
       }
     </>
   )
